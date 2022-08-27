@@ -6,84 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="feria, plantas, jujuy, ciudad cultural" />
     <meta name="author" content="Ontiveros-Torres" />
-    <meta
-      name="description"
-      content="home page de la feria de las plantas jujuy 2022"
-    />
+    <meta name="description" content="home page de la feria de las plantas jujuy 2022" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Feria de las Plantas</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
-          <a href="index.html" class="logo">
+          <a href="#home" class="logo">
             <img src="/assets/logo-planta.png" alt="" width="60px">
           </a>
           <ul class="barra">
             <li class="barraItem">
-              <a href="">nosotros</a>
+              <a href="#about">nosotros</a>
             </li>
             <li class="barraItem">
-              <a href="">El evento</a>
+              <a href="#event">El evento</a>
             </li>
             <li class="barraItem">
-              <a href="">registrate</a>
+              <a href="#contact">registrate</a>
             </li>
           </ul>
       </nav>
     </header>
     <main>
+      <section id="home" class="content">
+        <div class="homeContainer">
+          <div class="home-titulo">
+              <h1>Feria de las plantas</h1>
+              <br>               
+              <h2>Juntos potenciamos el comercio jujeño</h2>
+          </div>
+          <div class="home-imagen">
+              <img src="/assets/feriadeplantas.jpg" alt="feria de plantas" width="100%" height="100%"">               
+          </div> 
+        </div>  
+    </section>
+    <section id="event" class="content">
       <div class="container">
-        <h2 class="eventoTitulo"> Se realizará la primera edición de la feria de plantas</h3>
-        <div id="elEvento">
-          <div class="eventoImg">
-            <img src="/assets/eventoimag.jpg" alt="imagenEjemplo" />
-          </div>
-          <div class="eventoTexto">
-                <h4 class="eventoSubtitulo">Se esperan 700 productores en ciudad cultural</h3>
-              <br>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla
-              adipisci qui quae minus laborum alias numquam et eveniet, excepturi
-              officiis repellat fugit id veniam a. Cumque commodi quis quidem
-              placeat! Vero dicta dignissimos cum minus neque natus quis impedit
-              possimus, eaque ullam pariatur velit sed error facere perspiciatis
-              numquam distinctio doloribus quidem! Exercitationem eaque, illum
-              voluptate saepe quaerat fuga excepturi. Similique quasi alias
-              facere! Id, illum voluptas? Quibusdam cupiditate numquam nulla?
-              Pariatur itaque fugit, minus quidem neque vel laborum aspernatur, at
-              amet provident voluptatem numquam. Saepe laudantium iste nulla
-              cupiditate? Esse aperiam neque doloremque nesciunt id facere minima
-              laborum veniam sit voluptatum error pariatur placeat, totam sed
-              sunt, nobis, voluptatibus labore? Odio deserunt voluptatibus
-              adipisci inventore qui vel voluptate quaerat.
+        <div class="event-titulo">
+            <h2>Feria de las plantas</h2>
+            <br>               
+            <p>Preparando la bienvenida a la primavera, la Feria de Plantas
+               tendrá distintas actividades. El evento tiene el objetivo de
+                visibilizar el trabajo de 45 productores de plantas y flores 
+                ornamentales que integran esta asociación de productores y emprendedores. </p>
+        </div>
+        <div class="event-video">
+          <iframe width="430" height="384" src="https://www.youtube.com/embed/wO5hPeBlOhk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              
+        </div> 
+      </div>  
+    </section>
+    <section id="about" class="content">
+      <div class="container">
+        <div class="about-titulo">
+            <h2>Nosotros</h2>
+            <br>               
+            <p> La Municipalidad de la Capital junto a la Asociación de 
+              Productores de Plantas Ornamentales de Jujuy (A.P.P.O.JUY.) 
+              diagramaron la vuelta del Paseo de las Plantas en Ciudad Cultural.</p>
+            <p>A.P.P.O.JUY. es hoy la institución madre
+              y modelo que transformó la industria florícola jujeña, siendo
+              uno de los mercados de plantas ornamentales más importantes del
+              país y gestora de la Exposición de Floricultura más grande del NOA. 
             </p>
+        </div>
+        <div class="about-imagen">
+            <img src="/assets/organizadores.jpg" alt="organizadores" width="100%" height="100%"">               
+        </div> 
+      </div>  
+  </section>
+  <section id="contact" class="content">
+    <div class="container">
+      <div class="contact-form">        
+        <form id="formulario">
+          <h2>Formulario de Contacto</h2>                    
+          <div class="form-group">
+            <label for="comercio">Comercio</label>
+            <input id="comercio" class="form-control" type="text" maxlength="90"/>
           </div>
-        </div>
+          <div class="form-group">
+            <label for="titular">Titular</label>
+            <input id="titular" class="form-control" type="text" maxlength="90" />
+          </div>
+          <div class="form-group">
+            <label for="celular">Celular</label>
+            <input id="celular" class="form-control" type="number" />
+          </div>
+          <div class="form-group">
+            <label for="name">Mensaje</label>
+            <textarea
+              class="form-control"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <button id="enviar" class="btn btn-light">Enviar</button>
+        </form>
       </div>
-      <h2>El tiempo</h2>
-      <div id="contenedorTiempo">
-        <div id="caja1">
-          <h1 id="temperatura-valor"> </h1>
-          <h1 id="temperatura-descripcion"></h1>
-        </div>
-        <div id="caja2">
-          <h2 id="ubicacion"></h2>
-          <img id="icono-animado" src="" alt="" height="128" width="128">
-        </div>
-        <div id="caja3">
-          <h3>Velocidad del viento</h3>
-          <h1 id="viento-velocidad"></h1>
-        </div>
+      <div class="contact-title">
+        <h2>Sumate al evento para fomentar el desarrollo económico local.</h2>
+        <h2>Luego te contactamos.</h2>
       </div>
-    </main>
-    <footer>
-      <div class="wp">
-        <a href="https://web.whatsapp.com/" target="_blank" class="whatsapp">
-          <img src="/assets/WhatsApp_icon.png" alt="icono whatsapp" width="50px">       
-        </a>
-      </div>
-    </footer>
+    </div>
+  </section>
+<section id="tiempo" class="content">  
+  <div id="contenedorTiempo">
+    <div id="caja1">
+      <h1 id="temperatura-valor"> </h1>
+      <h1 id="temperatura-descripcion"></h1>
+    </div>
+    <div id="caja2">
+      <h2 id="ubicacion"></h2>
+      <img id="icono-animado" src="" alt="" height="128" width="128">
+    </div>
+    <div id="caja3">
+      <h3>Velocidad del viento</h3>
+      <h1 id="viento-velocidad"></h1>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wp">
+    <a href="https://wa.me/+5493885179886?text=¡Gracias+por+contactarte!" target="_blank" class="whatsapp">
+      <img src="/assets/WhatsApp_icon.png" alt="icono whatsapp" width="50px">       
+    </a>
+  </div>  
+  </footer>
     <script src="/main.js"></script>
   </body>
 </html>
